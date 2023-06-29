@@ -1,0 +1,15 @@
+C:\xampp\htdocs\Web\src\main\java\beans\sessions\VehiculosFacade.java
+C:\xampp\htdocs\Web\src\main\java\dao\exceptions\NonexistentEntityException.java
+C:\xampp\htdocs\Web\src\main\java\dao\exceptions\PreexistingEntityException.java
+C:\xampp\htdocs\Web\src\main\java\dao\VehiculosJpaController.java
+C:\xampp\htdocs\Web\src\main\java\jsf\clases\UsuariosController.java
+C:\xampp\htdocs\Web\src\main\java\jsf\clases\util\PaginationHelper.java
+C:\xampp\htdocs\Web\src\main\java\jsf\clases\util\JsfUtil.java
+C:\xampp\htdocs\Web\src\main\java\beans\sessions\UsuariosFacade.java
+C:\xampp\htdocs\Web\src\main\java\beans\sessions\AbstractFacade.java
+C:\xampp\htdocs\Web\src\main\java\dao\exceptions\RollbackFailureException.java
+C:\xampp\htdocs\Web\src\main\java\entities\Usuarios.java
+C:\xampp\htdocs\Web\src\main\java\entities\Vehiculos.java
+C:\xampp\htdocs\Web\src\main\java\dao\exceptions\IllegalOrphanException.java
+C:\xampp\htdocs\Web\src\main\java\dao\UsuariosJpaController.java
+C:\xampp\htdocs\Web\src\main\java\jsf\clases\VehiculosController.java

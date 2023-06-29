@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateVehiculosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateVehiculosLabel_idVehiculo}" for="idVehiculo" />
+                    <h:inputText id="idVehiculo" value="#{vehiculosController.selected.idVehiculo}" title="#{bundle.CreateVehiculosTitle_idVehiculo}" required="true" requiredMessage="#{bundle.CreateVehiculosRequiredMessage_idVehiculo}"/>
+                    <h:outputLabel value="#{bundle.CreateVehiculosLabel_marcaVehiculo}" for="marcaVehiculo" />
+                    <h:inputText id="marcaVehiculo" value="#{vehiculosController.selected.marcaVehiculo}" title="#{bundle.CreateVehiculosTitle_marcaVehiculo}" required="true" requiredMessage="#{bundle.CreateVehiculosRequiredMessage_marcaVehiculo}"/>
+                    <h:outputLabel value="#{bundle.CreateVehiculosLabel_modelo}" for="modelo" />
+                    <h:inputText id="modelo" value="#{vehiculosController.selected.modelo}" title="#{bundle.CreateVehiculosTitle_modelo}" required="true" requiredMessage="#{bundle.CreateVehiculosRequiredMessage_modelo}"/>
+                    <h:outputLabel value="#{bundle.CreateVehiculosLabel_anioMatricula}" for="anioMatricula" />
+                    <h:inputText id="anioMatricula" value="#{vehiculosController.selected.anioMatricula}" title="#{bundle.CreateVehiculosTitle_anioMatricula}" required="true" requiredMessage="#{bundle.CreateVehiculosRequiredMessage_anioMatricula}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateVehiculosLabel_color}" for="color" />
+                    <h:inputText id="color" value="#{vehiculosController.selected.color}" title="#{bundle.CreateVehiculosTitle_color}" required="true" requiredMessage="#{bundle.CreateVehiculosRequiredMessage_color}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{vehiculosController.create}" value="#{bundle.CreateVehiculosSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{vehiculosController.prepareList}" value="#{bundle.CreateVehiculosShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateVehiculosIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
